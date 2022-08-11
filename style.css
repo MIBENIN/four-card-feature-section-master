@@ -1,0 +1,133 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+--Very_Dark_Blue: hsl(234, 12%, 34%);
+--Grayish_Blue: hsl(229, 6%, 66%);
+--Very_Light_Gray: hsl(0, 0%, 98%);
+}
+body{
+    min-height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin:3em 1em;
+    background-color: var(--Very_Light_Gray);
+}
+.main-title,.main-description{
+    text-align: center;
+}
+.main-title,.card-title{
+    color:var(--Very_Dark_Blue);
+    font-weight: 600;
+}
+.main-title span{
+    font-weight: 400;
+    color:var(--Grayish_Blue);
+}
+.main-description{
+    width:40%;
+    margin:1em auto 3em;
+    color:var(--Grayish_Blue);
+    font-weight: 400;
+}
+.cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:2em;
+    padding:0 5em;
+}
+.card{
+    box-shadow: .1rem .1rem .9rem .2rem  rgba(150, 148, 148, 0.25);
+    width:30%;
+    padding: 2em;
+    position: relative;
+    border-radius: 5px;
+}
+.supervisor-card{
+    border-top:3px solid cyan;
+}
+.teambuilder-card{
+    border-top:3px solid red;
+}
+.karma-card{
+    border-top:3px solid orange;
+}
+.calculator-card{
+    border-top:3px solid blue;
+}
+.team-karma-cards{
+    width:30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2em;
+}
+.teambuilder-card,.karma-card{
+    width:100%;
+}
+.card-description{
+    font-weight: 200;
+    margin-bottom:7em;
+    font-size: .8rem;
+    font-weight: 200;
+    line-height: 1.8;
+    color:var(--Grayish_Blue);
+}
+
+.image{
+    width:50px;
+    position:absolute;
+    bottom: 2em;right:2em;
+    
+}
+@media screen and (max-width:1000px){
+    .main-description{
+        width:75%;
+    }
+    .cards-container{
+        padding:0;
+    }
+}
+@media screen and (max-width:768px){
+    .main-description{
+        width:90%;
+    }
+    .cards-container{
+        flex-direction: column;
+    }
+    .card,.team-karma-cards{
+        width:75%;
+    }
+    .teambuilder-card,.karma-card{
+        width:100%;
+    }
+    .card-description
+    {
+        margin:.5em 0 5.5em;
+    }
+}
+@media screen and (max-width:600px){
+    body{
+        margin:3.5em 2em;
+    }
+    .main-title{
+        font-size: 1.7rem;
+    }
+    .main-description{
+        width:100%;
+    }
+    .card-title{
+        font-size:1.4rem;
+    }
+    .team-karma-cards,.card{
+        width:100%;
+    }
+}
